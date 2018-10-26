@@ -10,8 +10,7 @@ Shader "Diffuse Lambert"
 
 	SubShader
 	{
-		Tags
-		{ "RenderType" = "Opaque" "Queue" = "Geometry" }
+		Tags { "RenderType" = "Opaque" "Queue" = "Geometry" }
 
 		Pass
 		{
@@ -24,7 +23,8 @@ Shader "Diffuse Lambert"
 
 			#pragma vertex vert 
 			#pragma fragment frag 
-
+			#pragma target 3.0
+			
 			#pragma multi_compile_fwdbase
 
 			float4 _Colour;

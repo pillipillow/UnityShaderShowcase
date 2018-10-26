@@ -19,7 +19,8 @@ Shader "Solid Texture"
 
 			#pragma vertex vert 
 			#pragma fragment frag 
-
+			#pragma target 3.0
+			
 			float4 _Colour;
 			sampler2D _MainTex;
 			float4 _MainTex_ST; //store tiling and offset data
