@@ -2,6 +2,7 @@ Shader "Solid Texture"
 {
 	Properties
 	{
+		_Colour("Main Colour",Color) = (0,0,0,0)
 		_MainTex("Main Texture",2D) = "white" {} //Similar to DiffuseTexture
 	}
 
@@ -19,6 +20,7 @@ Shader "Solid Texture"
 			#pragma vertex vert 
 			#pragma fragment frag 
 
+			float4 _Colour;
 			sampler2D _MainTex;
 			float4 _MainTex_ST; //store tiling and offset data
 
@@ -45,8 +47,8 @@ Shader "Solid Texture"
 			fixed4 frag(v2f i) : SV_TARGET 
 			{
 				//return fixed4(i.uv.x, i.uv.y,0,1); //return the uv coordinates in colour channels
-				
-				return tex2D(_MainTex, i.uv);
+				fixed4 albedo = tex2D(_MainTex, i.uv) * _Colour;
+				return albedo;
 			}
 
 			ENDCG
