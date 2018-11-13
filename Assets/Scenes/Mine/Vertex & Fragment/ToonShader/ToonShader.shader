@@ -15,7 +15,7 @@
 		_ShadowTint("Shadow Colour", Color) = (1,1,1,1)
 		[IntRange]_StepAmount("Shadow Steps", Range(1, 16)) = 2
 		_StepWidth("Step Size", Range(0.01, 1)) = 0.25
-		_Smoothness("Specular Size", Range(0, 1)) = 0
+		_SpecSmoothness("Specular Size", Range(0, 1)) = 0
 		_SpecularFalloff("Specular Falloff", Range(0, 2)) = 1
 
 		[Header(Outline Parameters)]
