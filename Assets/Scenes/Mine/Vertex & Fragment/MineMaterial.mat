@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: MineMaterial
-  m_Shader: {fileID: 4800000, guid: 16b4569a2765f654fb6327fc18d64ddd, type: 3}
+  m_Shader: {fileID: 4800000, guid: bac67ee3b58f99e42b082594e53861e0, type: 3}
   m_ShaderKeywords: _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -88,9 +88,11 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _OutlineExtrusion: 0.0021
+    - _OutlineExtrusion: 0
     - _Parallax: 0.02
     - _Radius: 0
+    - _RimExtrusion: 0.002
+    - _RimOutlineExtrusion: 0
     - _ScrollXSpeed: 10
     - _ScrollYSpeed: 0
     - _Smoothness: 1
@@ -101,7 +103,7 @@ Material:
     - _SpecularSize: 0
     - _SrcBlend: 1
     - _StepAmount: 2
-    - _StepWidth: 0.76
+    - _StepWidth: 0.32
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
@@ -111,5 +113,7 @@ Material:
     - _Colour: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineColour: {r: 1, g: 1, b: 1, a: 1}
+    - _RimLightColour: {r: 1, g: 0.976601, b: 0.6556604, a: 1}
+    - _RimOutlineColour: {r: 0.20010895, g: 0.126157, b: 0, a: 1}
     - _ShadowTint: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecularTint: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecularTint: {r: 0, g: 0, b: 0, a: 1}
