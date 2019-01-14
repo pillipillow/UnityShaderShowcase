@@ -1,22 +1,27 @@
-﻿Shader "Mine/ToonRamp"
+﻿Shader "Mine/02a - DiffuseShader"
 {
 	Properties
 	{
 		[Header(Base Parameters)]
 		_Colour("Colour Tint",Color) = (0,0,0,0)
 		_MainTex("Texture", 2D) = "white" {}
+		_HeightTex("Heights", 2D) = "white" {}
+		_NormalTex("Normals", 2D) = "bump" {}
 
-		[Header(Ramp Parameters)]
-		_RampTex("Ramp Texture",2D) = "white" {}
-		_LightAmount("Light Intensity", Float) = 0
+		[Header(Light Parameters)]
+		_SpecularTint("Specular tint", Color) = (0,0,0,0)
+		_Smoothness("Specular Size", Range(0, 1)) = 0
+		//Switch to MetallicLight.cginc
+		[Gamma]_Metallic("Metallic", Range(0, 1)) = 0
+		_BumpScale("Bump Scale", Float) = 1 
 	}
 
 		Subshader
 		{
 			Tags { "RenderType" = "Opaque" "Queue" = "Geometry" }
 
-			//Diffuse Shader
-			Pass
+			
+			Pass //Direct Light
 			{
 				Tags {"LightMode" = "ForwardBase"}
 				Cull off
@@ -29,12 +34,16 @@
 				#pragma multi_compile _ SHADOWS_SCREEN
 				#define FORWARD_BASE_PASS
 
-				#include "ToonRamp.cginc"
+				//Replace below with
+				//StandardLight
+				//Metallic
+				//Bumpiness
+				#include "Bumpiness.cginc"
 
 				ENDCG
 			}
 
-			Pass
+			Pass //Other Lights
 			{
 				Tags {"LightMode" = "ForwardAdd"}
 				Blend One One 
@@ -47,12 +56,15 @@
 
 				#pragma multi_compile_fwdadd_fullshadows
 
-				#include "ToonRamp.cginc"
+				//Replace below with
+				//StandardLight
+				//Metallic
+				#include "Bumpiness.cginc"
 
 				ENDCG
 			}
 
-			Pass
+			Pass //Shadows
 			{
 				Tags {"LightMode" = "ShadowCaster"}
 

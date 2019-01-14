@@ -57,6 +57,7 @@ v2f vert(appdata v)
 fixed4 frag(v2f i) : SV_TARGET
 {
 	//Light
+	i.normal = normalize(i.normal);
 	float3 lightDir;
 	#if defined(POINT) || defined(POINT_COOKIE) || defined(SPOT)
 		lightDir = normalize(_WorldSpaceLightPos0 - i.worldPos);

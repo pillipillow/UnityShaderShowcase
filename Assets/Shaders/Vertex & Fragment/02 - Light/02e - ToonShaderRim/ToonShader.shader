@@ -1,4 +1,4 @@
-﻿Shader "Mine/Toon Shader/Outline"
+﻿Shader "Mine/Toon Shader/02e - Rim Light"
 {
 	Properties
 	{
@@ -18,17 +18,9 @@
 		_SpecSmoothness("Specular Size", Range(0, 1)) = 0
 		_SpecularFalloff("Specular Falloff", Range(0, 2)) = 1
 
-		[Header(Outline Parameters)]
-		_OutlineExtrusion("Outline Size", Range(0,0.01)) = 1
-		_OutlineColour("Outline Colour", Color) = (1,1,1,1)
-		_OutlineTex("Texture", 2D) = "white" {}
-		_ScrollXSpeed("Scroll X Speed", Float) = 0
-		_ScrollYSpeed("Scroll Y Speed", Float) = 0
-		_Angle("Angle", Range(-5.0,  5.0)) = 0.0
-
-		[Header(Outline Rim Parameters)]
-		_RimOutlineExtrusion("Rim Outline Size", Range(0,0.004)) = 1
-		_RimOutlineColour("Rim Outline Colour", Color) = (1,1,1,1)
+		[Header(Rimlight Parameters)]
+		_RimExtrusion("Rim Outline Size", Range(0,0.05)) = 1
+		
 	}
 
 	Subshader
@@ -39,15 +31,6 @@
 		{
 			Tags {"LightMode" = "ForwardBase"}
 			Cull off
-
-			Stencil // Writes to the stencil buffer
-			{
-				Ref 4
-				Comp always
-				Pass replace
-				ZFail keep
-			}
-
 
 			CGPROGRAM
 			#pragma vertex vert 
@@ -99,31 +82,6 @@
 		Pass
 		{
 			Tags {"LightMode" = "ForwardBase"}
-			Cull off
-			ZWrite on
-			ZTest on
-
-			Stencil //Reads the stencil buffer
-			{
-				Ref 4
-				Comp notequal
-				Fail keep
-				Pass replace
-			}
-
-			CGPROGRAM
-			#pragma vertex vert 
-			#pragma fragment frag 
-			#pragma target 3.0
-
-			#include "Outline.cginc"
-
-			ENDCG
-		}
-
-		Pass
-		{
-			Tags {"LightMode" = "ForwardBase"}
 			Cull front
 
 			CGPROGRAM
@@ -131,9 +89,10 @@
 			#pragma fragment frag 
 			#pragma target 3.0
 
-			#include "OutlineRim.cginc"
+			#include "Rimlight.cginc"
 
 			ENDCG
 		}
+		
 	}
 }

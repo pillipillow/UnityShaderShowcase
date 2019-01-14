@@ -49,6 +49,7 @@ v2f vert(appdata v)
 fixed4 frag(v2f i) : SV_TARGET
 {
 	//Light
+	i.normal = normalize(i.normal);
 	float3 lightDir;
 	#if defined(POINT) || defined(POINT_COOKIE) || defined(SPOT)
 		lightDir = normalize(_WorldSpaceLightPos0 - i.worldPos);
@@ -69,7 +70,7 @@ fixed4 frag(v2f i) : SV_TARGET
 	float3 viewDir = normalize(_WorldSpaceCameraPos - i.worldPos);
 	float3 halfVector = normalize(lightDir + viewDir); //Blinn-Phong formula
 	float nDotH = DotClamped(i.normal, halfVector);
-	float4 spec = pow(nDotH, _Smoothness * 100) * _SpecularTint * _LightColor0;
+	float4 spec = pow(nDotH, (1 - _Smoothness) * 100) * _SpecularTint * _LightColor0;
 
 	//Texture
 	float2 main_uv = TRANSFORM_TEX(i.uv, _MainTex);

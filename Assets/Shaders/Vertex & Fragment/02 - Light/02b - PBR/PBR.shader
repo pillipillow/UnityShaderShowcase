@@ -1,4 +1,4 @@
-﻿Shader "Mine/DiffuseShader"
+﻿Shader "Mine/02b - PBRShader"
 {
 	Properties
 	{
@@ -8,15 +8,16 @@
 
 		[Header(Light Parameters)]
 		_SpecularTint("Specular tint", Color) = (0,0,0,0)
-		_Smoothness("Specular Size", Range(0.1, 1)) = 0
+		_Smoothness("Specular Size", Range(0, 1)) = 0
+		[Gamma]_Metallic("Metallic", Range(0, 1)) = 0 //Switch to MetallicLight.cginc
 	}
 
 		Subshader
 		{
 			Tags { "RenderType" = "Opaque" "Queue" = "Geometry" }
 
-			//Diffuse Shader
-			Pass
+			
+			Pass //Direct Light
 			{
 				Tags {"LightMode" = "ForwardBase"}
 				Cull off
@@ -29,12 +30,12 @@
 				#pragma multi_compile _ SHADOWS_SCREEN
 				#define FORWARD_BASE_PASS
 
-				#include "StandardLight.cginc"
+				#include "PhysicalBasedRender.cginc"
 
 				ENDCG
 			}
 
-			Pass
+			Pass //Other Lights
 			{
 				Tags {"LightMode" = "ForwardAdd"}
 				Blend One One 
@@ -47,12 +48,12 @@
 
 				#pragma multi_compile_fwdadd_fullshadows
 
-				#include "StandardLight.cginc"
+				#include "PhysicalBasedRender.cginc"
 
 				ENDCG
 			}
 
-			Pass
+			Pass //Shadows
 			{
 				Tags {"LightMode" = "ShadowCaster"}
 
@@ -63,7 +64,7 @@
 
 				#pragma multi_compile_shadowcaster
 
-				#include "Shadow.cginc"
+				#include "ShadowPBS.cginc"
 
 				ENDCG
 			}

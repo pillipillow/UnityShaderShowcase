@@ -1,3 +1,6 @@
+#if !defined(SHADOW_INCLUDED)
+#define SHADOW_INCLUDED
+
 #include "UnityCG.cginc"
 
 struct appdata
@@ -23,3 +26,5 @@ fixed4 frag(v2f i) : SV_TARGET
 {
 	SHADOW_CASTER_FRAGMENT(i);
 }
+
+#endif

@@ -5,9 +5,10 @@ Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: head
-  m_Shader: {fileID: 4800000, guid: bac67ee3b58f99e42b082594e53861e0, type: 3}
+  m_Shader: {fileID: 4800000, guid: 0680d46236d640c4798113ff132d22d4, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -75,10 +76,10 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _OutlineExtrusion: 0
+    - _OutlineExtrusion: 0.0057
     - _Parallax: 0.02
-    - _RimExtrusion: 0
-    - _RimOutlineExtrusion: 0.00346
+    - _RimExtrusion: 0.05
+    - _RimOutlineExtrusion: 0
     - _ScrollXSpeed: 10
     - _ScrollYSpeed: 0
     - _Smoothness: 1
