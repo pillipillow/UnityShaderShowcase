@@ -9,9 +9,9 @@ float4 _Colour;
 sampler2D _MainTex;
 float4 _MainTex_ST;
 
-sampler2D _HeightTex;
+/*sampler2D _HeightTex;
 float4 _HeightTex_ST;
-float4 _HeightTex_TexelSize;
+float4 _HeightTex_TexelSize;*/
 
 sampler2D _NormalTex;
 float4 _NormalTex_ST;
@@ -122,9 +122,8 @@ fixed4 frag(v2f i) : SV_TARGET
 	float nDotH = DotClamped(i.normal, halfVector);
 
 	//Texture
-	float2 main_uv = TRANSFORM_TEX(i.uv, _HeightTex);
+	float2 main_uv = TRANSFORM_TEX(i.uv, _MainTex);
 	fixed4 albedo = tex2D(_MainTex, main_uv) * _Colour;
-
 
 	//Metallic
 	float3 specularTint; // = albedo * _Metallic;
