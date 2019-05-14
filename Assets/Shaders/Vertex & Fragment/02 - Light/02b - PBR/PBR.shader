@@ -9,7 +9,7 @@
 		[Header(Light Parameters)]
 		_SpecularTint("Specular tint", Color) = (0,0,0,0)
 		_Smoothness("Specular Size", Range(0, 1)) = 0
-		[Gamma]_Metallic("Metallic", Range(0, 1)) = 0 //Switch to MetallicLight.cginc
+		[Gamma]_Metallic("Metallic", Range(0, 1)) = 0 
 	}
 
 		Subshader
