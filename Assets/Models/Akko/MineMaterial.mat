@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MineMaterial
-  m_Shader: {fileID: 4800000, guid: bac67ee3b58f99e42b082594e53861e0, type: 3}
+  m_Shader: {fileID: 4800000, guid: 9affb7b1d721c36418cedf421452ac35, type: 3}
   m_ShaderKeywords: _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -89,7 +89,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Angle: 0
-    - _BumpScale: 0
+    - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _Displacement: 0.005
@@ -100,7 +100,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _LightAmount: 1
-    - _Metallic: 0
+    - _Metallic: 1
     - _Mode: 0
     - _OcclusionStrength: 1
     - _OutlineExtrusion: 0
@@ -111,7 +111,7 @@ Material:
     - _ScrollXSpeed: 10
     - _ScrollYSpeed: 0
     - _Sharpness: 1
-    - _Smoothness: 0
+    - _Smoothness: 1
     - _SmoothnessTextureChannel: 0
     - _SpecSmoothness: 0
     - _SpecularFalloff: 0
@@ -135,4 +135,4 @@ Material:
     - _RimLightColour: {r: 1, g: 0.976601, b: 0.6556604, a: 1}
     - _RimOutlineColour: {r: 0.1102941, g: 0.040381514, b: 0.008920848, a: 1}
     - _ShadowTint: {r: 0.1102941, g: 0.040381514, b: 0.008920848, a: 1}
-    - _SpecularTint: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecularTint: {r: 1, g: 0.018810872, b: 0, a: 1}

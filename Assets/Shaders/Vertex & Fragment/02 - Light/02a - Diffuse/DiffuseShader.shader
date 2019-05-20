@@ -5,12 +5,11 @@
 		[Header(Base Parameters)]
 		_Colour("Colour Tint",Color) = (0,0,0,0)
 		_MainTex("Texture", 2D) = "white" {}
-		//_HeightTex("Heights", 2D) = "white" {}
 		_NormalTex("Normals", 2D) = "bump" {}
 
 		[Header(Light Parameters)]
-		_SpecularTint("Specular tint", Color) = (0,0,0,0)
-		_Smoothness("Specular Size", Range(0, 1)) = 0
+		//_SpecularTint("Specular tint", Color) = (0,0,0,0)
+		_Smoothness("Smoothness", Range(0, 1)) = 0
 		//Switch to MetallicLight.cginc
 		[Gamma]_Metallic("Metallic", Range(0, 1)) = 0
 		//For Bumpiness Parameter
@@ -39,7 +38,8 @@
 				//StandardLight
 				//Metallic
 				//Bumpiness
-				#include "Bumpiness.cginc"
+				//Reflection
+				#include "Reflection.cginc"
 
 				ENDCG
 			}
