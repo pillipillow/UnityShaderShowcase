@@ -1,28 +1,26 @@
 fileFormatVersion: 2
-guid: 498822bcf0cbbb146a1d52f6f7984ff6
+guid: 283a8547ebbcb014ba24c88b43febe70
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Akko
-    100004: Camera
-    100006: Lamp
-    400000: //RootNode
-    400002: Akko
-    400004: Camera
-    400006: Lamp
-    2000000: Camera
-    2100000: Material
-    2300000: Akko
-    3300000: Akko
-    4300000: Akko
-    10800000: Lamp
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+    100000: LeftEye
+    100002: //RootNode
+    100004: RightEye
+    400000: LeftEye
+    400002: //RootNode
+    400004: RightEye
+    2100000: Transparent
+    2100002: Base
+    2300000: LeftEye
+    2300002: //RootNode
+    2300004: RightEye
+    3300000: LeftEye
+    3300002: //RootNode
+    3300004: RightEye
+    4300000: Lune
+    4300002: LeftEye
+    4300004: RightEye
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -53,14 +51,14 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 2.54
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 0
-    importLights: 0
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -84,7 +82,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2

@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: eyes
+  m_Name: LuneTransparent
   m_Shader: {fileID: 4800000, guid: 56d4fdddec433da448ba829051f24f09, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 50dadfd2eac83e54da6891328595c186, type: 3}
+        m_Texture: {fileID: 2800000, guid: 49a75db381947d04a885d4667e4244c3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -60,7 +60,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RampTex:
-        m_Texture: {fileID: 2800000, guid: 987afee0d4ef0de47918bc5e5dcda72b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 21682c7aad1dde04ca79aeb26ed9ca52, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -68,35 +68,28 @@ Material:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DstBlend: 0
+    - _DstBlend: 10
     - _GlossMapScale: 1
-    - _Glossiness: 0
+    - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _LightAmount: 1
     - _Metallic: 0
-    - _Mode: 0
+    - _Mode: 3
     - _OcclusionStrength: 1
-    - _OutlineExtrusion: 0.0057
+    - _OutlineExtrusion: 0
     - _Parallax: 0.02
-    - _RimExtrusion: 0
-    - _RimOutlineExtrusion: 0
+    - _RimExtrusion: 0.0041
+    - _RimOutlineExtrusion: 0.00009
     - _ScrollXSpeed: 0
     - _ScrollYSpeed: 0
-    - _Smoothness: 1
     - _SmoothnessTextureChannel: 0
-    - _SpecSmoothness: 0
-    - _SpecularFalloff: 1
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _StepAmount: 2
-    - _StepWidth: 0.25
     - _UVSec: 0
-    - _ZWrite: 1
+    - _ZWrite: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Colour: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineColour: {r: 1, g: 1, b: 1, a: 1}
     - _RimOutlineColour: {r: 1, g: 1, b: 1, a: 1}
-    - _ShadowTint: {r: 0.09803922, g: 0.019607844, b: 0.003921569, a: 1}
-    - _SpecularTint: {r: 0, g: 0, b: 0, a: 0}
