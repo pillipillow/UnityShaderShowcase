@@ -6,11 +6,6 @@ public class RotateScript : MonoBehaviour {
 
     public float spinSpeed;
 
-	void Start () {
-		
-	}
-	
-
 	void Update ()
     {
         transform.Rotate(0.0f, spinSpeed * Time.deltaTime, 0.0f);
