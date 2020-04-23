@@ -1,4 +1,4 @@
-﻿Shader "Mine/Toon Ramp/02ca - Outline"
+﻿Shader "Mine/02c - Toon Ramp/02ca - Outline"
 {
 	Properties
 	{

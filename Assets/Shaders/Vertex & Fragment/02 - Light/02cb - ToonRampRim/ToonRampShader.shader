@@ -1,4 +1,4 @@
-﻿Shader "Mine/Toon Ramp/02cb - Rim Light"
+﻿Shader "Mine/02c - Toon Ramp/02cb - Rim Light"
 {
 	Properties
 	{

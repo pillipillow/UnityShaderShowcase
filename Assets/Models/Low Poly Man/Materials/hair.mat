@@ -8,14 +8,13 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: hair
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 16b4569a2765f654fb6327fc18d64ddd, type: 3}
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
-  stringTagMap:
-    RenderType: Transparent
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -83,6 +82,7 @@ Material:
     - _OcclusionStrength: 1
     - _OutlineExtrusion: 0
     - _Parallax: 0.02
+    - _RimOutlineExtrusion: 1
     - _ScrollXSpeed: 0
     - _ScrollYSpeed: 0
     - _Smoothness: 1
@@ -100,5 +100,6 @@ Material:
     - _Colour: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineColour: {r: 1, g: 1, b: 1, a: 1}
+    - _RimOutlineColour: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowTint: {r: 0.09803922, g: 0.019607844, b: 0.003921569, a: 1}
-    - _SpecularTint: {r: 0, g: 0, b: 0, a: 0}
+    - _SpecularTint: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 0}

@@ -1,4 +1,4 @@
-﻿Shader "Mine/Toon Shader/02da - Outline"
+﻿Shader "Mine/02d - Toon Shader/02da - Outline"
 {
 	Properties
 	{
